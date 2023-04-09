@@ -54,19 +54,19 @@ const FetchIngredents = (meal) => {
   return IngredentsList;
 };
 
-// const openPopup = (meal) => {
-//   recipedetailscontent.innerHTML = `<h2 class="recipename">${meal.strMeal}</h2>
-//   <h3>Ingredents:</h3>
-//   <ul class="ingredientlist">${FetchIngredents(meal)}</ul>
-//   <div  class= "instructions">
-//   <h3>Instructions</h3>
-//   <p>${meal.strInstructions}</p>`;
-//   recipedetailscontent.parentElement.style.display = "block";
-// };
+const openPopup = (meal) => {
+  recipedetailscontent.innerHTML = `<h2 class="recipename">${meal.strMeal}</h2>
+  <h3>Ingredents:</h3>
+  <ul class="ingredientlist">${FetchIngredents(meal)}</ul>
+  <div  class= "instructions">
+  <h3>Instructions</h3>
+  <p>${meal.strInstructions}</p>`;
+  recipedetailscontent.parentElement.style.display = "block";
+};
 
-// recipedetailsclosebtn.addEventListener("click", () => {
-//   recipedetailscontent.parentElement.style.display = "none";
-// });
+recipedetailsclosebtn.addEventListener("click", () => {
+  recipedetailscontent.parentElement.style.display = "none";
+});
 
 searchbutton.addEventListener("click", (e) => {
   e.preventDefault();
